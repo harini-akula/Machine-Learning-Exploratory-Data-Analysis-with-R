@@ -2,15 +2,19 @@
 title: "Exploratory Data Analysis"
 output: html_notebook
 ---
-## 1. Vegas Hotel Dataset: 
+<br/>
 
-Reading Vegas hotel data from csv file
+## I. Vegas Hotel Dataset: 
+<br/>
+1. Reading Vegas hotel data from csv file and viewing the structure of the dataset
 ```{R}
 vegashotels = read.csv2("vegashotels-1.csv", stringsAsFactors = TRUE)
 str(vegashotels)
 ```
+From the structure of the dataset below are the categorical and numerical attributes:
 
-
-
-
-
+* Categorical features: 
+  + User.country, Score, Period.of.stay, Traveler.type, Pool, Gym, Tennis.court, Spa, Casino, Free.internet, Hotel.name, Hotel.stars, User.continent, Review.month, and Review.weekday (total of 15 categorical attributes)  
+<br/>
+* Numerical features:
+  + Nr..reviews, Nr..hotel.reviews, Helpful.votes, Nr..rooms,and Member.years (total of 5 numerical attributes)
