@@ -20,18 +20,32 @@ From the structure of the dataset below are the categorical and numerical attrib
   + Nr..reviews, Nr..hotel.reviews, Helpful.votes, Nr..rooms,and Member.years (total of 5 numerical attributes)
 
 <br/>  
-**2. Summary statistics of the dataset:**
+**2. 
+<br/>
+    i. Summary statistics of the dataset:**
 ```{R}
   vegashotels_summary <- summary(vegashotels)
   vegashotels_summary
 ```
 <br/>
-**Missing values in the variables:**
+    **ii. Missing values in the variables:**
 ```{R}
 colSums(is.na(vegashotels))
 ```
 * There are no missing values in the dataset
-  
+
+<br/>
+**3. Histogram of score variable:**
+```{R, echo = F}
+attach(vegashotels)
+```
+```{R}
+hist(Score, main = "Histogram of Vegas hotels score", xlab = "Score", col = "#DEBAC0", labels = TRUE, breaks = c(0,1,2,3,4,5), ylim = c(0,300))
+```
+* From the histogram we can say that 227 of the 504 vegas hotels have a score of 5 which is about 45% of them. And a total of 391 hotels out of 504 hotels have a score of either 4 or 5 which is around 77.5% of the vegas hotels.
+
+
+
 
 
 
