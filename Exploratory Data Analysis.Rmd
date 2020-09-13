@@ -69,8 +69,18 @@ median(Score)
 sentiment = factor(ifelse(Score==4 | Score == 5,"positive","negative"))
 sentiment
 ```
+<br/>
+**7. Frequency of sentiment and Score variables**
+```{R}
+summary(sentiment)
 
+negative_freq = table(Score)[[1]] + table(Score)[[2]] + table(Score)[[3]]
+negative_freq
 
+positive_freq = table(Score)[[4]] + table(Score)[[5]]
+positive_freq
+```
+* Frequency for the “positive” sentiment is equal to the combined frequency of 4 and 5 for the Score and frequency for the “negative” sentiment is equal to the combined frequency of the rest of the values the Score.
 
 
 
