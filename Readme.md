@@ -21,10 +21,10 @@ housing.csv. This dataset is taken from Kaggle
 (https://www.kaggle.com/camnugent/california-housing-prices ) and contains information from the 1990 California census and pertains to the houses found in a given California district 
 5. Readme.md
 
-# Installations:
+## Installations:
 1. RStudio
 2. R
 
-# Running the files:
+## Running the files:
 1. Import rmd file to RStudio
 2. Click preview button to view the preview of the analysis performed.
