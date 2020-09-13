@@ -53,6 +53,16 @@ score_mode
 ```
 * Mode of the Score variable is 5 meaning a score of 5 is more common than other scores for Vegas hotels.
 
+<br/>
+**5. Quantile and median for Score:**
+```{R}
+quantile(vh$Score)
+```
+* Median of the Score variable using quantile function is 4
+
+```{R}
+median(vh$Score)
+```
 
 
 
