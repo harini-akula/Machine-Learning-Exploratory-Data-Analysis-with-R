@@ -82,6 +82,55 @@ positive_freq
 ```
 * Frequency for the “positive” sentiment is equal to the combined frequency of 4 and 5 for the Score and frequency for the “negative” sentiment is equal to the combined frequency of the rest of the values the Score.
 
+<br/>
+**8. statistical test to determine if sentiment is associated with any of the variables: "Pool", "Gym","Free.Internet", "Period.of.Stay", "traverler.type"", and "hotel.stars" with alpha=0.01**
+
+```{R message=FALSE, warning=FALSE, include=FALSE}
+install.packages("gmodels")
+library(gmodels)
+```
+
+<br/>
+    **i. sentiment vs Pool:**
+```{R}
+CrossTable(sentiment,Pool, chisq=TRUE)
+```
+* As p value is less than alpha, it can be concluded that there is an association between Pool and sentiment.
+
+<br/>
+    **ii. sentiment vs Gym:**
+```{R}
+CrossTable(sentiment,Gym, chisq=TRUE)
+```
+* As p value is greater than alpha, it can be concluded that there is an NO association between Gym and sentiment.
+
+<br/>
+    **iii. sentiment vs Free.internet:**
+```{R}
+CrossTable(sentiment,Free.internet, chisq=TRUE)
+```
+* As p value is less than alpha, it can be concluded that there is an association between Free.internet and sentiment.
+
+<br/>
+    **iv. sentiment vs Period.of.stay:**
+```{R}
+CrossTable(sentiment,Period.of.stay, chisq=TRUE)
+```
+* As p value is greater than alpha, it can be concluded that there is an NO association between Period.of.stay and sentiment.
+
+<br/>
+    **v. sentiment vs Traveler.type:**
+```{R}
+CrossTable(sentiment,Traveler.type, chisq=TRUE)
+```
+* As p value is greater than alpha, it can be concluded that there is an NO association between Traveler.type and sentiment.
+
+<br/>
+    **vi. sentiment vs Hotel.stars:**
+```{R}
+CrossTable(sentiment,Hotel.stars, chisq=TRUE)
+```
+* As p value is less than alpha, it can be concluded that there is an association between Hotel.stars and sentiment.
 
 
 
