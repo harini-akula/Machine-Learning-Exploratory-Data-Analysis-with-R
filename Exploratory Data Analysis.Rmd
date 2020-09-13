@@ -1,0 +1,16 @@
+---
+title: "Exploratory Data Analysis"
+output: html_notebook
+---
+## 1. Vegas Hotel Dataset: 
+
+Reading Vegas hotel data from csv file
+```{R}
+vegashotels = read.csv2("vegashotels-1.csv", stringsAsFactors = TRUE)
+str(vegashotels)
+```
+
+
+
+
+
