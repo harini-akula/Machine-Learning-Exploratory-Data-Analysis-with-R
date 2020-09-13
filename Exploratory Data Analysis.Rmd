@@ -56,14 +56,19 @@ score_mode
 <br/>
 **5. Quantile and median for Score:**
 ```{R}
-quantile(vh$Score)
+quantile(Score)
 ```
 * Median of the Score variable using quantile function is 4
 
 ```{R}
-median(vh$Score)
+median(Score)
 ```
-
+<br/>
+**6. sentiment factor variable that takes the value “positive” if score is 4 or 5 and “negative” otherwise:**
+```{R}
+sentiment = factor(ifelse(Score==4 | Score == 5,"positive","negative"))
+sentiment
+```
 
 
 
