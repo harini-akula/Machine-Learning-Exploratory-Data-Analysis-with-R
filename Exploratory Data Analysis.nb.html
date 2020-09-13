@@ -1752,7 +1752,7 @@ summary {
 <p><br /></p>
 <div id="i.-vegas-hotel-dataset" class="section level2">
 <h2>I. Vegas Hotel Dataset:</h2>
-<p><br /> 1. Reading Vegas hotel data from csv file and viewing the structure of the dataset</p>
+<p><br /> <strong>1. Reading Vegas hotel data from csv file and viewing the structure of the dataset:</strong></p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudmVnYXNob3RlbHMgPSByZWFkLmNzdjIoXCJ2ZWdhc2hvdGVscy0xLmNzdlwiLCBzdHJpbmdzQXNGYWN0b3JzID0gVFJVRSlcbnN0cih2ZWdhc2hvdGVscylcbmBgYCJ9 -->
@@ -1793,21 +1793,16 @@ str(vegashotels)</code></pre>
 </ul></li>
 <li>Numerical features:
 <ul>
-<li>Nr..reviews, Nr..hotel.reviews, Helpful.votes, Nr..rooms,and Member.years (total of 5 numerical attributes) <br /><br />
-</li>
+<li>Nr..reviews, Nr..hotel.reviews, Helpful.votes, Nr..rooms,and Member.years (total of 5 numerical attributes)</li>
 </ul></li>
 </ul>
-<ol start="2" style="list-style-type: decimal">
-<li><br /></li>
-</ol>
-<ul>
-<li>Summary statistics of the dataset</li>
-</ul>
+<p><br /><br />
+<strong>2. Summary statistics of the dataset:</strong></p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudmVnYXNob3RlbHNfc3VtbWFyeSA8LSBzdW1tYXJ5KHZlZ2FzaG90ZWxzKVxudmVnYXNob3RlbHNfc3VtbWFyeVxuYGBgIn0= -->
-<pre class="r"><code>vegashotels_summary &lt;- summary(vegashotels)
-vegashotels_summary</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuICB2ZWdhc2hvdGVsc19zdW1tYXJ5IDwtIHN1bW1hcnkodmVnYXNob3RlbHMpXG4gIHZlZ2FzaG90ZWxzX3N1bW1hcnlcbmBgYCJ9 -->
+<pre class="r"><code>  vegashotels_summary &lt;- summary(vegashotels)
+  vegashotels_summary</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiICAgIFVzZXIuY291bnRyeSAgTnIuLnJldmlld3MgICAgIE5yLi5ob3RlbC5yZXZpZXdzIEhlbHBmdWwudm90ZXMgICAgICAgIFNjb3JlICAgICAgXG4gVVNBICAgICAgOjIxNyAgIE1pbi4gICA6ICAxLjAwICAgTWluLiAgIDogIDAuMDAgICAgTWluLiAgIDogIDAuMDAgICBNaW4uICAgOjEuMDAwICBcbiBVSyAgICAgICA6IDcyICAgMXN0IFF1LjogMTIuMDAgICAxc3QgUXUuOiAgNS4wMCAgICAxc3QgUXUuOiAgOC4wMCAgIDFzdCBRdS46NC4wMDAgIFxuIENhbmFkYSAgIDogNjUgICBNZWRpYW4gOiAyMy41MCAgIE1lZGlhbiA6ICA5LjAwICAgIE1lZGlhbiA6IDE2LjAwICAgTWVkaWFuIDo0LjAwMCAgXG4gQXVzdHJhbGlhOiAzNiAgIE1lYW4gICA6IDQ4LjEzICAgTWVhbiAgIDogMTYuMDIgICAgTWVhbiAgIDogMzEuNzUgICBNZWFuICAgOjQuMTIzICBcbiBJcmVsYW5kICA6IDEzICAgM3JkIFF1LjogNTQuMjUgICAzcmQgUXUuOiAxOC4wMCAgICAzcmQgUXUuOiAzNS4wMCAgIDNyZCBRdS46NS4wMDAgIFxuIEluZGlhICAgIDogMTEgICBNYXguICAgOjc3NS4wMCAgIE1heC4gICA6MjYzLjAwICAgIE1heC4gICA6MzY1LjAwICAgTWF4LiAgIDo1LjAwMCAgXG4gKE90aGVyKSAgOiA5MCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiBQZXJpb2Qub2Yuc3RheSAgVHJhdmVsZXIudHlwZSAgUG9vbCAgICAgIEd5bSAgICAgIFRlbm5pcy5jb3VydCAgU3BhICAgICAgQ2FzaW5vICAgXG4gRGVjLUZlYjoxMjQgICAgQnVzaW5lc3M6IDc0ICAgTk8gOiAyNCAgIE5PIDogMjQgICBOTyA6Mzg0ICAgICAgTk8gOjEyMCAgIE5PIDogNDggIFxuIEp1bi1BdWc6MTI2ICAgIENvdXBsZXMgOjIxNCAgIFlFUzo0ODAgICBZRVM6NDgwICAgWUVTOjEyMCAgICAgIFlFUzozODQgICBZRVM6NDU2ICBcbiBNYXItTWF5OjEyOCAgICBGYW1pbGllczoxMTAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gU2VwLU5vdjoxMjYgICAgRnJpZW5kcyA6IDgyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICAgIFNvbG8gICAgOiAyNCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIEZyZWUuaW50ZXJuZXQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgSG90ZWwubmFtZSAgIEhvdGVsLnN0YXJzICAgICAgTnIuLnJvb21zICAgXG4gTk8gOiAyNCAgICAgICBCZWxsYWdpbyBMYXMgVmVnYXMgICAgICAgICAgICAgICAgICAgIDogMjQgICBNaW4uICAgOjMuMDAwICAgTWluLiAgIDogMTg4ICBcbiBZRVM6NDgwICAgICAgIENhZXNhcnMgUGFsYWNlICAgICAgICAgICAgICAgICAgICAgICAgOiAyNCAgIDFzdCBRdS46My41MDAgICAxc3QgUXUuOiA4MjYgIFxuICAgICAgICAgICAgICAgQ2lyY3VzIENpcmN1cyBIb3RlbCAmIENhc2lubyBMYXMgVmVnYXM6IDI0ICAgTWVkaWFuIDo0LjAwMCAgIE1lZGlhbiA6MjcwMCAgXG4gICAgICAgICAgICAgICBFbmNvcmUgYXQgd3lubiBMYXMgVmVnYXMgICAgICAgICAgICAgIDogMjQgICBNZWFuICAgOjQuMTQzICAgTWVhbiAgIDoyMTk2ICBcbiAgICAgICAgICAgICAgIEV4Y2FsaWJ1ciBIb3RlbCAmIENhc2lubyAgICAgICAgICAgICAgOiAyNCAgIDNyZCBRdS46NS4wMDAgICAzcmQgUXUuOjMwMjUgIFxuICAgICAgICAgICAgICAgSGlsdG9uIEdyYW5kIFZhY2F0aW9ucyBhdCB0aGUgRmxhbWluZ286IDI0ICAgTWF4LiAgIDo1LjAwMCAgIE1heC4gICA6NDAyNyAgXG4gICAgICAgICAgICAgICAoT3RoZXIpICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDozNjAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgICAgICBVc2VyLmNvbnRpbmVudCAgTWVtYmVyLnllYXJzICAgICAgICAgIFJldmlldy5tb250aCAgIFJldmlldy53ZWVrZGF5XG4gQWZyaWNhICAgICAgIDogIDcgICAgTWluLiAgIDotMTgwNi4wMDAwICAgQXByaWwgICA6IDQyICAgRnJpZGF5ICAgOjY1ICAgIFxuIEFzaWEgICAgICAgICA6IDM2ICAgIDFzdCBRdS46ICAgIDIuMDAwMCAgIEF1Z3VzdCAgOiA0MiAgIE1vbmRheSAgIDo3NCAgICBcbiBFdXJvcGUgICAgICAgOjExOCAgICBNZWRpYW4gOiAgICA0LjAwMDAgICBEZWNlbWJlcjogNDIgICBTYXR1cmRheSA6NjEgICAgXG4gTm9ydGggQW1lcmljYToyOTUgICAgTWVhbiAgIDogICAgMC43Njc5ICAgRmVicnVhcnk6IDQyICAgU3VuZGF5ICAgOjc3ICAgIFxuIE9jZWFuaWEgICAgICA6IDQxICAgIDNyZCBRdS46ICAgIDYuMDAwMCAgIEphbnVhcnkgOiA0MiAgIFRodXJzZGF5IDo2MiAgICBcbiBTb3V0aCBBbWVyaWNhOiAgNyAgICBNYXguICAgOiAgIDEzLjAwMDAgICBKdWx5ICAgIDogNDIgICBUdWVzZGF5ICA6ODAgICAgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgKE90aGVyKSA6MjUyICAgV2VkbmVzZGF5Ojg1ICAgIFxuIn0= -->
 <pre><code>    User.country  Nr..reviews     Nr..hotel.reviews Helpful.votes        Score      
@@ -1845,10 +1840,31 @@ vegashotels_summary</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p><br /> <strong>Missing values in the variables:</strong></p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sU3Vtcyhpcy5uYSh2ZWdhc2hvdGVscykpXG5gYGAifQ== -->
+<pre class="r"><code>colSums(is.na(vegashotels))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICBVc2VyLmNvdW50cnkgICAgICAgTnIuLnJldmlld3MgTnIuLmhvdGVsLnJldmlld3MgICAgIEhlbHBmdWwudm90ZXMgICAgICAgICAgICAgU2NvcmUgXG4gICAgICAgICAgICAgICAgMCAgICAgICAgICAgICAgICAgMCAgICAgICAgICAgICAgICAgMCAgICAgICAgICAgICAgICAgMCAgICAgICAgICAgICAgICAgMCBcbiAgIFBlcmlvZC5vZi5zdGF5ICAgICBUcmF2ZWxlci50eXBlICAgICAgICAgICAgICBQb29sICAgICAgICAgICAgICAgR3ltICAgICAgVGVubmlzLmNvdXJ0IFxuICAgICAgICAgICAgICAgIDAgICAgICAgICAgICAgICAgIDAgICAgICAgICAgICAgICAgIDAgICAgICAgICAgICAgICAgIDAgICAgICAgICAgICAgICAgIDAgXG4gICAgICAgICAgICAgIFNwYSAgICAgICAgICAgIENhc2lubyAgICAgRnJlZS5pbnRlcm5ldCAgICAgICAgSG90ZWwubmFtZSAgICAgICBIb3RlbC5zdGFycyBcbiAgICAgICAgICAgICAgICAwICAgICAgICAgICAgICAgICAwICAgICAgICAgICAgICAgICAwICAgICAgICAgICAgICAgICAwICAgICAgICAgICAgICAgICAwIFxuICAgICAgICBOci4ucm9vbXMgICAgVXNlci5jb250aW5lbnQgICAgICBNZW1iZXIueWVhcnMgICAgICBSZXZpZXcubW9udGggICAgUmV2aWV3LndlZWtkYXkgXG4gICAgICAgICAgICAgICAgMCAgICAgICAgICAgICAgICAgMCAgICAgICAgICAgICAgICAgMCAgICAgICAgICAgICAgICAgMCAgICAgICAgICAgICAgICAgMCBcbiJ9 -->
+<pre><code>     User.country       Nr..reviews Nr..hotel.reviews     Helpful.votes             Score 
+                0                 0                 0                 0                 0 
+   Period.of.stay     Traveler.type              Pool               Gym      Tennis.court 
+                0                 0                 0                 0                 0 
+              Spa            Casino     Free.internet        Hotel.name       Hotel.stars 
+                0                 0                 0                 0                 0 
+        Nr..rooms    User.continent      Member.years      Review.month    Review.weekday 
+                0                 0                 0                 0                 0 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li>There are no missing values in the dataset</li>
+</ul>
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkV4cGxvcmF0b3J5IERhdGEgQW5hbHlzaXMiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KPGJyLz4NCg0KIyMgSS4gVmVnYXMgSG90ZWwgRGF0YXNldDogDQo8YnIvPg0KMS4gUmVhZGluZyBWZWdhcyBob3RlbCBkYXRhIGZyb20gY3N2IGZpbGUgYW5kIHZpZXdpbmcgdGhlIHN0cnVjdHVyZSBvZiB0aGUgZGF0YXNldA0KYGBge1J9DQp2ZWdhc2hvdGVscyA9IHJlYWQuY3N2MigidmVnYXNob3RlbHMtMS5jc3YiLCBzdHJpbmdzQXNGYWN0b3JzID0gVFJVRSkNCnN0cih2ZWdhc2hvdGVscykNCmBgYA0KRnJvbSB0aGUgc3RydWN0dXJlIG9mIHRoZSBkYXRhc2V0IGJlbG93IGFyZSB0aGUgY2F0ZWdvcmljYWwgYW5kIG51bWVyaWNhbCBhdHRyaWJ1dGVzOg0KDQoqIENhdGVnb3JpY2FsIGZlYXR1cmVzOiANCiAgKyBVc2VyLmNvdW50cnksIFNjb3JlLCBQZXJpb2Qub2Yuc3RheSwgVHJhdmVsZXIudHlwZSwgUG9vbCwgR3ltLCBUZW5uaXMuY291cnQsIFNwYSwgQ2FzaW5vLCBGcmVlLmludGVybmV0LCBIb3RlbC5uYW1lLCBIb3RlbC5zdGFycywgVXNlci5jb250aW5lbnQsIFJldmlldy5tb250aCwgYW5kIFJldmlldy53ZWVrZGF5ICh0b3RhbCBvZiAxNSBjYXRlZ29yaWNhbCBhdHRyaWJ1dGVzKSAgDQo8YnIvPg0KKiBOdW1lcmljYWwgZmVhdHVyZXM6DQogICsgTnIuLnJldmlld3MsIE5yLi5ob3RlbC5yZXZpZXdzLCBIZWxwZnVsLnZvdGVzLCBOci4ucm9vbXMsYW5kIE1lbWJlci55ZWFycyAodG90YWwgb2YgNSBudW1lcmljYWwgYXR0cmlidXRlcykNCjxici8+ICANCjIuIA0KPGJyLz4NCiAgKiBTdW1tYXJ5IHN0YXRpc3RpY3Mgb2YgdGhlIGRhdGFzZXQNCmBgYHtSfQ0KdmVnYXNob3RlbHNfc3VtbWFyeSA8LSBzdW1tYXJ5KHZlZ2FzaG90ZWxzKQ0KdmVnYXNob3RlbHNfc3VtbWFyeQ0KYGBgDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkV4cGxvcmF0b3J5IERhdGEgQW5hbHlzaXMiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KPGJyLz4NCg0KIyMgSS4gVmVnYXMgSG90ZWwgRGF0YXNldDogDQo8YnIvPg0KKioxLiBSZWFkaW5nIFZlZ2FzIGhvdGVsIGRhdGEgZnJvbSBjc3YgZmlsZSBhbmQgdmlld2luZyB0aGUgc3RydWN0dXJlIG9mIHRoZSBkYXRhc2V0OioqDQpgYGB7Un0NCnZlZ2FzaG90ZWxzID0gcmVhZC5jc3YyKCJ2ZWdhc2hvdGVscy0xLmNzdiIsIHN0cmluZ3NBc0ZhY3RvcnMgPSBUUlVFKQ0Kc3RyKHZlZ2FzaG90ZWxzKQ0KYGBgDQpGcm9tIHRoZSBzdHJ1Y3R1cmUgb2YgdGhlIGRhdGFzZXQgYmVsb3cgYXJlIHRoZSBjYXRlZ29yaWNhbCBhbmQgbnVtZXJpY2FsIGF0dHJpYnV0ZXM6DQoNCiogQ2F0ZWdvcmljYWwgZmVhdHVyZXM6IA0KICArIFVzZXIuY291bnRyeSwgU2NvcmUsIFBlcmlvZC5vZi5zdGF5LCBUcmF2ZWxlci50eXBlLCBQb29sLCBHeW0sIFRlbm5pcy5jb3VydCwgU3BhLCBDYXNpbm8sIEZyZWUuaW50ZXJuZXQsIEhvdGVsLm5hbWUsIEhvdGVsLnN0YXJzLCBVc2VyLmNvbnRpbmVudCwgUmV2aWV3Lm1vbnRoLCBhbmQgUmV2aWV3LndlZWtkYXkgKHRvdGFsIG9mIDE1IGNhdGVnb3JpY2FsIGF0dHJpYnV0ZXMpICANCjxici8+DQoqIE51bWVyaWNhbCBmZWF0dXJlczoNCiAgKyBOci4ucmV2aWV3cywgTnIuLmhvdGVsLnJldmlld3MsIEhlbHBmdWwudm90ZXMsIE5yLi5yb29tcyxhbmQgTWVtYmVyLnllYXJzICh0b3RhbCBvZiA1IG51bWVyaWNhbCBhdHRyaWJ1dGVzKQ0KDQo8YnIvPiAgDQoqKjIuIFN1bW1hcnkgc3RhdGlzdGljcyBvZiB0aGUgZGF0YXNldDoqKg0KYGBge1J9DQogIHZlZ2FzaG90ZWxzX3N1bW1hcnkgPC0gc3VtbWFyeSh2ZWdhc2hvdGVscykNCiAgdmVnYXNob3RlbHNfc3VtbWFyeQ0KYGBgDQo8YnIvPg0KKipNaXNzaW5nIHZhbHVlcyBpbiB0aGUgdmFyaWFibGVzOioqDQpgYGB7Un0NCmNvbFN1bXMoaXMubmEodmVnYXNob3RlbHMpKQ0KYGBgDQoqIFRoZXJlIGFyZSBubyBtaXNzaW5nIHZhbHVlcyBpbiB0aGUgZGF0YXNldA0KICANCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQo=</div>
 
 
 
