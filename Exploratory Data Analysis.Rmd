@@ -44,7 +44,14 @@ hist(Score, main = "Histogram of Vegas hotels score", xlab = "Score", col = "#DE
 ```
 * From the histogram we can say that 227 of the 504 vegas hotels have a score of 5 which is about 45% of them. And a total of 391 hotels out of 504 hotels have a score of either 4 or 5 which is around 77.5% of the vegas hotels.
 
-
+<br/>
+**4. Mode of score variable:**
+```{R}
+score_table = table(Score)
+score_mode = as.numeric(names(score_table))[score_table == max(score_table)]
+score_mode
+```
+* Mode of the Score variable is 5 meaning a score of 5 is more common than other scores for Vegas hotels.
 
 
 
