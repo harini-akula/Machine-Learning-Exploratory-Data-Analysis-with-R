@@ -1793,13 +1793,62 @@ str(vegashotels)</code></pre>
 </ul></li>
 <li>Numerical features:
 <ul>
-<li>Nr..reviews, Nr..hotel.reviews, Helpful.votes, Nr..rooms,and Member.years (total of 5 numerical attributes)</li>
+<li>Nr..reviews, Nr..hotel.reviews, Helpful.votes, Nr..rooms,and Member.years (total of 5 numerical attributes) <br /><br />
+</li>
 </ul></li>
 </ul>
+<ol start="2" style="list-style-type: decimal">
+<li><br /></li>
+</ol>
+<ul>
+<li>Summary statistics of the dataset</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudmVnYXNob3RlbHNfc3VtbWFyeSA8LSBzdW1tYXJ5KHZlZ2FzaG90ZWxzKVxudmVnYXNob3RlbHNfc3VtbWFyeVxuYGBgIn0= -->
+<pre class="r"><code>vegashotels_summary &lt;- summary(vegashotels)
+vegashotels_summary</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgIFVzZXIuY291bnRyeSAgTnIuLnJldmlld3MgICAgIE5yLi5ob3RlbC5yZXZpZXdzIEhlbHBmdWwudm90ZXMgICAgICAgIFNjb3JlICAgICAgXG4gVVNBICAgICAgOjIxNyAgIE1pbi4gICA6ICAxLjAwICAgTWluLiAgIDogIDAuMDAgICAgTWluLiAgIDogIDAuMDAgICBNaW4uICAgOjEuMDAwICBcbiBVSyAgICAgICA6IDcyICAgMXN0IFF1LjogMTIuMDAgICAxc3QgUXUuOiAgNS4wMCAgICAxc3QgUXUuOiAgOC4wMCAgIDFzdCBRdS46NC4wMDAgIFxuIENhbmFkYSAgIDogNjUgICBNZWRpYW4gOiAyMy41MCAgIE1lZGlhbiA6ICA5LjAwICAgIE1lZGlhbiA6IDE2LjAwICAgTWVkaWFuIDo0LjAwMCAgXG4gQXVzdHJhbGlhOiAzNiAgIE1lYW4gICA6IDQ4LjEzICAgTWVhbiAgIDogMTYuMDIgICAgTWVhbiAgIDogMzEuNzUgICBNZWFuICAgOjQuMTIzICBcbiBJcmVsYW5kICA6IDEzICAgM3JkIFF1LjogNTQuMjUgICAzcmQgUXUuOiAxOC4wMCAgICAzcmQgUXUuOiAzNS4wMCAgIDNyZCBRdS46NS4wMDAgIFxuIEluZGlhICAgIDogMTEgICBNYXguICAgOjc3NS4wMCAgIE1heC4gICA6MjYzLjAwICAgIE1heC4gICA6MzY1LjAwICAgTWF4LiAgIDo1LjAwMCAgXG4gKE90aGVyKSAgOiA5MCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiBQZXJpb2Qub2Yuc3RheSAgVHJhdmVsZXIudHlwZSAgUG9vbCAgICAgIEd5bSAgICAgIFRlbm5pcy5jb3VydCAgU3BhICAgICAgQ2FzaW5vICAgXG4gRGVjLUZlYjoxMjQgICAgQnVzaW5lc3M6IDc0ICAgTk8gOiAyNCAgIE5PIDogMjQgICBOTyA6Mzg0ICAgICAgTk8gOjEyMCAgIE5PIDogNDggIFxuIEp1bi1BdWc6MTI2ICAgIENvdXBsZXMgOjIxNCAgIFlFUzo0ODAgICBZRVM6NDgwICAgWUVTOjEyMCAgICAgIFlFUzozODQgICBZRVM6NDU2ICBcbiBNYXItTWF5OjEyOCAgICBGYW1pbGllczoxMTAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gU2VwLU5vdjoxMjYgICAgRnJpZW5kcyA6IDgyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICAgIFNvbG8gICAgOiAyNCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIEZyZWUuaW50ZXJuZXQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgSG90ZWwubmFtZSAgIEhvdGVsLnN0YXJzICAgICAgTnIuLnJvb21zICAgXG4gTk8gOiAyNCAgICAgICBCZWxsYWdpbyBMYXMgVmVnYXMgICAgICAgICAgICAgICAgICAgIDogMjQgICBNaW4uICAgOjMuMDAwICAgTWluLiAgIDogMTg4ICBcbiBZRVM6NDgwICAgICAgIENhZXNhcnMgUGFsYWNlICAgICAgICAgICAgICAgICAgICAgICAgOiAyNCAgIDFzdCBRdS46My41MDAgICAxc3QgUXUuOiA4MjYgIFxuICAgICAgICAgICAgICAgQ2lyY3VzIENpcmN1cyBIb3RlbCAmIENhc2lubyBMYXMgVmVnYXM6IDI0ICAgTWVkaWFuIDo0LjAwMCAgIE1lZGlhbiA6MjcwMCAgXG4gICAgICAgICAgICAgICBFbmNvcmUgYXQgd3lubiBMYXMgVmVnYXMgICAgICAgICAgICAgIDogMjQgICBNZWFuICAgOjQuMTQzICAgTWVhbiAgIDoyMTk2ICBcbiAgICAgICAgICAgICAgIEV4Y2FsaWJ1ciBIb3RlbCAmIENhc2lubyAgICAgICAgICAgICAgOiAyNCAgIDNyZCBRdS46NS4wMDAgICAzcmQgUXUuOjMwMjUgIFxuICAgICAgICAgICAgICAgSGlsdG9uIEdyYW5kIFZhY2F0aW9ucyBhdCB0aGUgRmxhbWluZ286IDI0ICAgTWF4LiAgIDo1LjAwMCAgIE1heC4gICA6NDAyNyAgXG4gICAgICAgICAgICAgICAoT3RoZXIpICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDozNjAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgICAgICBVc2VyLmNvbnRpbmVudCAgTWVtYmVyLnllYXJzICAgICAgICAgIFJldmlldy5tb250aCAgIFJldmlldy53ZWVrZGF5XG4gQWZyaWNhICAgICAgIDogIDcgICAgTWluLiAgIDotMTgwNi4wMDAwICAgQXByaWwgICA6IDQyICAgRnJpZGF5ICAgOjY1ICAgIFxuIEFzaWEgICAgICAgICA6IDM2ICAgIDFzdCBRdS46ICAgIDIuMDAwMCAgIEF1Z3VzdCAgOiA0MiAgIE1vbmRheSAgIDo3NCAgICBcbiBFdXJvcGUgICAgICAgOjExOCAgICBNZWRpYW4gOiAgICA0LjAwMDAgICBEZWNlbWJlcjogNDIgICBTYXR1cmRheSA6NjEgICAgXG4gTm9ydGggQW1lcmljYToyOTUgICAgTWVhbiAgIDogICAgMC43Njc5ICAgRmVicnVhcnk6IDQyICAgU3VuZGF5ICAgOjc3ICAgIFxuIE9jZWFuaWEgICAgICA6IDQxICAgIDNyZCBRdS46ICAgIDYuMDAwMCAgIEphbnVhcnkgOiA0MiAgIFRodXJzZGF5IDo2MiAgICBcbiBTb3V0aCBBbWVyaWNhOiAgNyAgICBNYXguICAgOiAgIDEzLjAwMDAgICBKdWx5ICAgIDogNDIgICBUdWVzZGF5ICA6ODAgICAgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgKE90aGVyKSA6MjUyICAgV2VkbmVzZGF5Ojg1ICAgIFxuIn0= -->
+<pre><code>    User.country  Nr..reviews     Nr..hotel.reviews Helpful.votes        Score      
+ USA      :217   Min.   :  1.00   Min.   :  0.00    Min.   :  0.00   Min.   :1.000  
+ UK       : 72   1st Qu.: 12.00   1st Qu.:  5.00    1st Qu.:  8.00   1st Qu.:4.000  
+ Canada   : 65   Median : 23.50   Median :  9.00    Median : 16.00   Median :4.000  
+ Australia: 36   Mean   : 48.13   Mean   : 16.02    Mean   : 31.75   Mean   :4.123  
+ Ireland  : 13   3rd Qu.: 54.25   3rd Qu.: 18.00    3rd Qu.: 35.00   3rd Qu.:5.000  
+ India    : 11   Max.   :775.00   Max.   :263.00    Max.   :365.00   Max.   :5.000  
+ (Other)  : 90                                                                      
+ Period.of.stay  Traveler.type  Pool      Gym      Tennis.court  Spa      Casino   
+ Dec-Feb:124    Business: 74   NO : 24   NO : 24   NO :384      NO :120   NO : 48  
+ Jun-Aug:126    Couples :214   YES:480   YES:480   YES:120      YES:384   YES:456  
+ Mar-May:128    Families:110                                                       
+ Sep-Nov:126    Friends : 82                                                       
+                Solo    : 24                                                       
+                                                                                   
+                                                                                   
+ Free.internet                                  Hotel.name   Hotel.stars      Nr..rooms   
+ NO : 24       Bellagio Las Vegas                    : 24   Min.   :3.000   Min.   : 188  
+ YES:480       Caesars Palace                        : 24   1st Qu.:3.500   1st Qu.: 826  
+               Circus Circus Hotel &amp; Casino Las Vegas: 24   Median :4.000   Median :2700  
+               Encore at wynn Las Vegas              : 24   Mean   :4.143   Mean   :2196  
+               Excalibur Hotel &amp; Casino              : 24   3rd Qu.:5.000   3rd Qu.:3025  
+               Hilton Grand Vacations at the Flamingo: 24   Max.   :5.000   Max.   :4027  
+               (Other)                               :360                                 
+       User.continent  Member.years          Review.month   Review.weekday
+ Africa       :  7    Min.   :-1806.0000   April   : 42   Friday   :65    
+ Asia         : 36    1st Qu.:    2.0000   August  : 42   Monday   :74    
+ Europe       :118    Median :    4.0000   December: 42   Saturday :61    
+ North America:295    Mean   :    0.7679   February: 42   Sunday   :77    
+ Oceania      : 41    3rd Qu.:    6.0000   January : 42   Thursday :62    
+ South America:  7    Max.   :   13.0000   July    : 42   Tuesday  :80    
+                                           (Other) :252   Wednesday:85    </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkV4cGxvcmF0b3J5IERhdGEgQW5hbHlzaXMiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KPGJyLz4NCg0KIyMgSS4gVmVnYXMgSG90ZWwgRGF0YXNldDogDQo8YnIvPg0KMS4gUmVhZGluZyBWZWdhcyBob3RlbCBkYXRhIGZyb20gY3N2IGZpbGUgYW5kIHZpZXdpbmcgdGhlIHN0cnVjdHVyZSBvZiB0aGUgZGF0YXNldA0KYGBge1J9DQp2ZWdhc2hvdGVscyA9IHJlYWQuY3N2MigidmVnYXNob3RlbHMtMS5jc3YiLCBzdHJpbmdzQXNGYWN0b3JzID0gVFJVRSkNCnN0cih2ZWdhc2hvdGVscykNCmBgYA0KRnJvbSB0aGUgc3RydWN0dXJlIG9mIHRoZSBkYXRhc2V0IGJlbG93IGFyZSB0aGUgY2F0ZWdvcmljYWwgYW5kIG51bWVyaWNhbCBhdHRyaWJ1dGVzOg0KDQoqIENhdGVnb3JpY2FsIGZlYXR1cmVzOiANCiAgKyBVc2VyLmNvdW50cnksIFNjb3JlLCBQZXJpb2Qub2Yuc3RheSwgVHJhdmVsZXIudHlwZSwgUG9vbCwgR3ltLCBUZW5uaXMuY291cnQsIFNwYSwgQ2FzaW5vLCBGcmVlLmludGVybmV0LCBIb3RlbC5uYW1lLCBIb3RlbC5zdGFycywgVXNlci5jb250aW5lbnQsIFJldmlldy5tb250aCwgYW5kIFJldmlldy53ZWVrZGF5ICh0b3RhbCBvZiAxNSBjYXRlZ29yaWNhbCBhdHRyaWJ1dGVzKSAgDQo8YnIvPg0KKiBOdW1lcmljYWwgZmVhdHVyZXM6DQogICsgTnIuLnJldmlld3MsIE5yLi5ob3RlbC5yZXZpZXdzLCBIZWxwZnVsLnZvdGVzLCBOci4ucm9vbXMsYW5kIE1lbWJlci55ZWFycyAodG90YWwgb2YgNSBudW1lcmljYWwgYXR0cmlidXRlcyk=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkV4cGxvcmF0b3J5IERhdGEgQW5hbHlzaXMiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KPGJyLz4NCg0KIyMgSS4gVmVnYXMgSG90ZWwgRGF0YXNldDogDQo8YnIvPg0KMS4gUmVhZGluZyBWZWdhcyBob3RlbCBkYXRhIGZyb20gY3N2IGZpbGUgYW5kIHZpZXdpbmcgdGhlIHN0cnVjdHVyZSBvZiB0aGUgZGF0YXNldA0KYGBge1J9DQp2ZWdhc2hvdGVscyA9IHJlYWQuY3N2MigidmVnYXNob3RlbHMtMS5jc3YiLCBzdHJpbmdzQXNGYWN0b3JzID0gVFJVRSkNCnN0cih2ZWdhc2hvdGVscykNCmBgYA0KRnJvbSB0aGUgc3RydWN0dXJlIG9mIHRoZSBkYXRhc2V0IGJlbG93IGFyZSB0aGUgY2F0ZWdvcmljYWwgYW5kIG51bWVyaWNhbCBhdHRyaWJ1dGVzOg0KDQoqIENhdGVnb3JpY2FsIGZlYXR1cmVzOiANCiAgKyBVc2VyLmNvdW50cnksIFNjb3JlLCBQZXJpb2Qub2Yuc3RheSwgVHJhdmVsZXIudHlwZSwgUG9vbCwgR3ltLCBUZW5uaXMuY291cnQsIFNwYSwgQ2FzaW5vLCBGcmVlLmludGVybmV0LCBIb3RlbC5uYW1lLCBIb3RlbC5zdGFycywgVXNlci5jb250aW5lbnQsIFJldmlldy5tb250aCwgYW5kIFJldmlldy53ZWVrZGF5ICh0b3RhbCBvZiAxNSBjYXRlZ29yaWNhbCBhdHRyaWJ1dGVzKSAgDQo8YnIvPg0KKiBOdW1lcmljYWwgZmVhdHVyZXM6DQogICsgTnIuLnJldmlld3MsIE5yLi5ob3RlbC5yZXZpZXdzLCBIZWxwZnVsLnZvdGVzLCBOci4ucm9vbXMsYW5kIE1lbWJlci55ZWFycyAodG90YWwgb2YgNSBudW1lcmljYWwgYXR0cmlidXRlcykNCjxici8+ICANCjIuIA0KPGJyLz4NCiAgKiBTdW1tYXJ5IHN0YXRpc3RpY3Mgb2YgdGhlIGRhdGFzZXQNCmBgYHtSfQ0KdmVnYXNob3RlbHNfc3VtbWFyeSA8LSBzdW1tYXJ5KHZlZ2FzaG90ZWxzKQ0KdmVnYXNob3RlbHNfc3VtbWFyeQ0KYGBgDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQo=</div>
 
 
 

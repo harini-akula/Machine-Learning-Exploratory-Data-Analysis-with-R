@@ -18,3 +18,47 @@ From the structure of the dataset below are the categorical and numerical attrib
 <br/>
 * Numerical features:
   + Nr..reviews, Nr..hotel.reviews, Helpful.votes, Nr..rooms,and Member.years (total of 5 numerical attributes)
+<br/>  
+2. 
+<br/>
+  * Summary statistics of the dataset
+```{R}
+vegashotels_summary <- summary(vegashotels)
+vegashotels_summary
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
