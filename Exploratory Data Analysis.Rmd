@@ -207,6 +207,14 @@ boxplot(housing$median_house_value, ylab= "Median house value", main="Boxplot of
 ```
 * From the boxplot it can be seen that median_house_value is positively skewed as the length of the whiskers is more above the box compared to the length of the whisker below the box. Also, the median (horizontal line inside the box) is closer to line indicating Q1 than line indicating Q3. This means most of the median_house_value have values less than its mean.
 
+<br/>
+**6. Analyze distribution of median_house_value using q-q plot:**
+
+```{R}
+qqnorm(housing$median_house_value, col = "#494C97")
+```
+* From the q-q plot it can be seen that median_house_value looks like curve and then a horizontal line. Therefore the median_house_value plot is not close to a straight line meaning its distribution is not close to normal. As it is mostly a curve it distribution is skewed.
+
 
 
 
