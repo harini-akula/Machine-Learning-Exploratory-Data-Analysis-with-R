@@ -143,6 +143,15 @@ str(housing)
 ```
 * There are 9 numerical and 1 categorical variable in the dataset.
 
+<br/>
+**2. **
+<br/>
+    **i. Summary statistics of California housing dataset:**
+
+```{R}
+summary(housing)
+```
+
 
 
 
