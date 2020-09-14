@@ -230,6 +230,23 @@ length(outliers)
 ```
 * There are 1071 outliers for median_house_value attribute.
 
+<br/>
+**8. Analyze positive/negative linear correlation for numerical attributes with median_house_value:**
+
+<br/>
+    **i. Scatterplots:**
+```{R}
+housing_num = housing[,names(housing)[1:9]]
+pairs(housing_num, col="deeppink4")
+```
+
+<br/>
+    **ii. cor matrix:**
+```{R}
+cor(housing_num, use="pairwise.complete.obs")
+```
+* From the above scatter plots and correlation matrix we can say there is a positive linear correlation between median_income and median_house_value attributes.
+
 
 
 
