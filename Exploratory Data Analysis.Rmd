@@ -160,6 +160,16 @@ colSums(is.na(housing))
 ```
 * There are 207 missing values in total_bedrooms variable of the dataset.
 
+<br/>
+**3. Count and percentage of rows with missing value in one or more variables: **
+
+<br/>
+    **i. Count of rows with missing value in one or more variables:**
+
+```{R}
+count = table(ifelse(complete.cases(housing),"complete","incomplete"))[["incomplete"]]
+count
+```
 
 
 
