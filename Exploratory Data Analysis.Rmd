@@ -253,6 +253,7 @@ cor(housing_num, use="pairwise.complete.obs")
 <br/>
     **i. Using boxplot:**
 ```{R}
+attach(housing)
 boxplot(median_house_value~ocean_proximity, col="#D6DBFF")
 ```
 
