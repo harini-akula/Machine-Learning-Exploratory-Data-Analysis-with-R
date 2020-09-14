@@ -40,7 +40,7 @@ colSums(is.na(vegashotels))
 attach(vegashotels)
 ```
 ```{R}
-hist(Score, main = "Histogram of Vegas hotels score", xlab = "Score", col = "#DEBAC0", labels = TRUE, breaks = c(0,1,2,3,4,5), ylim = c(0,300))
+hist(Score, main = "Histogram of Vegas hotels score", xlab = "Score", col = "#A196C5", labels = TRUE, breaks = c(0,1,2,3,4,5), ylim = c(0,300))
 ```
 * From the histogram we can say that 227 of the 504 vegas hotels have a score of 5 which is about 45% of them. And a total of 391 hotels out of 504 hotels have a score of either 4 or 5 which is around 77.5% of the vegas hotels.
 
@@ -200,6 +200,12 @@ hist(housing$median_house_value, xlab = "Median house value", main = "Histogram 
 ```
 * From the histogram it can be seen that median_house_value is positively skewed meaning most of the median_house_value have values less than its mean.
 
+<br/>
+    **ii. Boxplot of median_house_value:**
+```{R}
+boxplot(housing$median_house_value, ylab= "Median house value", main="Boxplot of median house value of housing data", col="#DEBAC0", label=TRUE)
+```
+* From the boxplot it can be seen that median_house_value is positively skewed as the length of the whiskers is more above the box compared to the length of the whisker below the box. Also, the median (horizontal line inside the box) is closer to line indicating Q1 than line indicating Q3. This means most of the median_house_value have values less than its mean.
 
 
 
