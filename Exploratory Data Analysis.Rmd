@@ -190,6 +190,16 @@ nrow(housing2)
 ```
 * There are 207 rows with missing value in the dataset. After removing these rows from the dataset containing 20640 rows the resulting dataset is having 20433 rows.
 
+<br/>
+**5. Histogram and boxplot of median_house_value:**
+
+<br/>
+    **i. Histogram of median_house_value:**
+```{R}
+hist(housing$median_house_value, xlab = "Median house value", main = "Histogram of median house value of housing data", col = "#B4C4AE", label = TRUE, ylim = c(0,5000))
+```
+* From the histogram it can be seen that median_house_value is positively skewed meaning most of the median_house_value have values less than its mean.
+
 
 
 
