@@ -253,7 +253,7 @@ cor(housing_num, use="pairwise.complete.obs")
 <br/>
     **i. Using boxplot:**
 ```{R}
-boxplot(median_house_value~ocean_proximity, col="#F0F3BD")
+boxplot(median_house_value~ocean_proximity, col="#D6DBFF")
 ```
 
 <br/>
@@ -263,6 +263,28 @@ oneway.test(median_house_value~ocean_proximity, data=housing)
 ```
 * From the above boxplot and oneway.test we can conclude that there is significant difference between the mean of median_house_value across different levels of ocean_proximity as p-value returned using oneway.test is less than alpha (0.01)
 
+<br/>
+**10. “Is_Inland” factor variable that takes the value “Yes” if the ocean_proximity is “Inland” and No” otherwise:**
+```{R}
+Is_Inland = factor(ifelse(ocean_proximity=="INLAND","YES","NO"))
+Is_Inland
+```
+
+<br/>
+**11. **
+
+<br/>
+    **i. Side by side box plot to visualize the relationship between “Is_Inland” and “median_house_value”:**
+```{R}
+boxplot(median_house_value~Is_Inland, col = "#D1EFE6", main="Side by side boxplot for Inland vs not Inland houses")
+```
+
+<br/>
+    **ii. Statistical test to see if there is significant difference between the means of median_house_value for Inland vs not Inland houses:**
+```{R}
+t.test(median_house_value~Is_Inland, alternative="two.sided")
+```
+* From the above side by side boxplot and t.test we can conclude that there is significant difference between the means of median_house_value for Inland vs not Inland houses because p-value returned using t.test is less than alpha (0.01)
 
 
 
