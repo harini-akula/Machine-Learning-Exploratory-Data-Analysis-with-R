@@ -131,14 +131,17 @@ CrossTable(sentiment,Traveler.type, chisq=TRUE)
 CrossTable(sentiment,Hotel.stars, chisq=TRUE)
 ```
 * As p value is less than alpha, it can be concluded that there is an association between Hotel.stars and sentiment.
+<br/>
 
+## II. California Housing Dataset: 
+<br/>
+**1. Reading California housing data from csv file and viewing the structure of the dataset:**
 
-
-
-
-
-
-
+```{R}
+housing = read.csv("housing-1.csv", stringsAsFactors = TRUE)
+str(housing)
+```
+* There are 9 numerical and 1 categorical variable in the dataset.
 
 
 
