@@ -164,12 +164,22 @@ colSums(is.na(housing))
 **3. Count and percentage of rows with missing value in one or more variables: **
 
 <br/>
-    **i. Count of rows with missing value in one or more variables:**
+    **i. Count of rows with missing values in one or more variables that is count of incomplete cases:**
 
 ```{R}
 count = table(ifelse(complete.cases(housing),"complete","incomplete"))[["incomplete"]]
 count
 ```
+
+<br/>
+    **ii. Percentage of rows with missing values in one or more variables:**
+
+```{R}
+prop = prop.table(table(ifelse(complete.cases(housing),"complete","incomplete")))*100
+percentage = prop[["incomplete"]]
+percentage
+```
+* Around 1% of the rows have missing values in one or more variables in the dataset.
 
 
 
