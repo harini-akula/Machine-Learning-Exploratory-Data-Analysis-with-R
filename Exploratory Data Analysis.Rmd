@@ -245,7 +245,25 @@ pairs(housing_num, col="deeppink4")
 ```{R}
 cor(housing_num, use="pairwise.complete.obs")
 ```
-* From the above scatter plots and correlation matrix we can say there is a positive linear correlation between median_income and median_house_value attributes.
+* From the above scatter plots and correlation matrix we can say there is a positive linear correlation between median_income and median_house_value attributes. 0.688075208 is the value returned by cor matrix for correlation between median_income and median_house_value attributes.
+
+<br/>
+**9. Analyze if there is statistically significant difference between the mean of median_house_value across different levels of ocean_proximity:**
+
+<br/>
+    **i. Using boxplot:**
+```{R}
+boxplot(median_house_value~ocean_proximity, col="#F0F3BD")
+```
+
+<br/>
+    **ii. Using oneway.test:**
+```{R}
+oneway.test(median_house_value~ocean_proximity, data=housing)
+```
+* From the above boxplot and oneway.test we can conclude that there is significant difference between the mean of median_house_value across different levels of ocean_proximity as p-value returned using oneway.test is less than alpha (0.01)
+
+
 
 
 
