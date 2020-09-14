@@ -152,6 +152,14 @@ str(housing)
 summary(housing)
 ```
 
+<br/>
+    **ii. Missing values in the dataset:**
+    
+```{R}
+colSums(is.na(housing))
+```
+* There are 207 missing values in total_bedrooms variable of the dataset.
+
 
 
 
