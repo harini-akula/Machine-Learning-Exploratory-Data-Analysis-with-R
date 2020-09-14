@@ -181,7 +181,14 @@ percentage
 ```
 * Around 1% of the rows have missing values in one or more variables in the dataset.
 
+<br/>
+**4. Remove rows with missing values:**
 
+```{R}
+housing2 = na.omit(housing)
+nrow(housing2)
+```
+* There are 207 rows with missing value in the dataset. After removing these rows from the dataset containing 20640 rows the resulting dataset is having 20433 rows.
 
 
 
