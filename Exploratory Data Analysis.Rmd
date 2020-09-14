@@ -215,6 +215,26 @@ qqnorm(housing$median_house_value, col = "#494C97")
 ```
 * From the q-q plot it can be seen that median_house_value looks like curve and then a horizontal line. Therefore the median_house_value plot is not close to a straight line meaning its distribution is not close to normal. As it is mostly a curve it distribution is skewed.
 
+<br/>
+**7. Ouliers of median_house_value:**
+
+```{R}
+x = housing$median_house_value
+iqr = IQR(x)
+q1 = summary(x)[[2]]
+q3 = summary(x)[[5]]
+left = q1 - 1.5 * iqr
+right = q3 + 1.5 * iqr
+outliers = x[x < left | x > right]
+length(outliers)
+```
+* There are 1071 outliers for median_house_value attribute.
+
+
+
+
+
+
 
 
 
